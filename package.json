@@ -1,0 +1,12 @@
+{
+  "name": "fleet-optimizer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "examples:storedash": "ts-node ./examples/storedash.ts",
+    "examples:mrclean": "ts-node ./examples/mrclean.ts",
+    "examples:hvacpro": "ts-node ./examples/hvacpro.ts",
+    "examples:trucking": "ts-node ./examples/trucking.ts",
+    "tests": "ts-node tests.ts"
+  }
+}
