@@ -8,5 +8,14 @@
     "examples:hvacpro": "ts-node ./examples/hvacpro.ts",
     "examples:trucking": "ts-node ./examples/trucking.ts",
     "tests": "ts-node tests.ts"
+  },
+  "dependencies": {
+    "leveldown": "^6.1.1",
+    "pouchdb-adapter-idb": "^7.3.0",
+    "pouchdb-adapter-leveldb": "^7.3.0",
+    "pouchdb-adapter-memory": "^7.3.0",
+    "rxdb": "^12.7.16",
+    "rxjs": "^7.5.6",
+    "uuid": "^8.3.2"
   }
 }
