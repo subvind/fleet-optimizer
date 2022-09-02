@@ -67,10 +67,10 @@ cd ~/Projects/osrm-backend
 # http://download.geofabrik.de/
 
 # because files are big they need swap enabled on them
-fallocate -l 100G ~/osm/north-america-latest.osm.pbf
-chmod 600 ~/osm/north-america-latest.osm.pbf
-mkswap ~/osm/north-america-latest.osm.pbf
-swapon ~/osm/north-america-latest.osm.pbf
+fallocate -l 100G ~/osm/swapfile
+chmod 600 ~/osm/swapfile
+mkswap ~/osm/swapfile
+swapon ~/osm/swapfile
 
 # load
 osrm-extract ~/osm/north-america-latest.osm.pbf -p profiles/car.lua
