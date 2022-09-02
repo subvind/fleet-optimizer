@@ -36,3 +36,46 @@ examples:
 ```bash
 # npm run examples:trucking
 ```
+
+### istrav-osrm
+We use OSRM for our distance matrix api calculator:
+- https://github.com/Project-OSRM/osrm-backend
+
+Setup:
+```bash
+# install dependencies
+sudo apt install build-essential git cmake pkg-config \
+libbz2-dev libxml2-dev libzip-dev libboost-all-dev \
+lua5.2 liblua5.2-dev libtbb-dev
+
+# clone repository
+cd ~/Projects
+git clone https://github.com/Project-OSRM/osrm-backend.git
+cd ./osrm-backend
+
+# compile and install OSRM binaries
+mkdir -p build
+cd build
+cmake ..
+cmake --build .
+sudo cmake --build . --target install
+
+# return
+cd ~/Projects/osrm-backend
+
+# extract open street maps after downloading files from:
+# http://download.geofabrik.de/
+
+# because files are big they need swap enabled on them
+fallocate -l 100G ~/osm/north-america-latest.osm.pbf
+chmod 600 ~/osm/north-america-latest.osm.pbf
+mkswap ~/osm/north-america-latest.osm.pbf
+swapon ~/osm/north-america-latest.osm.pbf
+
+# load
+osrm-extract ~/osm/north-america-latest.osm.pbf -p profiles/car.lua
+osrm-contract ~/osm/north-america-latest.osrm
+
+# run
+osrm-routed ~/osm/north-america-latest.osrm
+```
