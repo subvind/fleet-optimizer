@@ -37,6 +37,10 @@ examples:
 # npm run examples:trucking
 ```
 
+### istrav-couchdb
+We use CouchDB for data persistance. 
+https://linuxhint.com/install_couchdb_ubuntu/
+
 ### istrav-osrm
 We use OSRM for our distance matrix api calculator:
 - https://github.com/Project-OSRM/osrm-backend
