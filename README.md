@@ -39,7 +39,17 @@ examples:
 
 ### istrav-couchdb
 We use CouchDB for data persistance. 
-https://linuxhint.com/install_couchdb_ubuntu/
+```bash
+# on ubuntu 22
+sudo snap install couchdb
+
+# https://github.com/apache/couchdb-pkg/blob/main/README-SNAP.md
+
+$ sudo ufw enable
+$ sudo ufw allow 5984/tcp
+$ sudo ufw reload
+
+```
 
 ### istrav-osrm
 We use OSRM for our distance matrix api calculator:
