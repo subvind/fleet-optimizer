@@ -38,7 +38,9 @@ examples:
 ```
 
 ### istrav-couchdb
-We use CouchDB for data persistance. 
+We use CouchDB for data persistance.
+- https://couchdb.istrav.dev/_utils/
+
 ```bash
 # on ubuntu 22
 sudo snap install couchdb
@@ -48,7 +50,6 @@ sudo snap install couchdb
 $ sudo ufw enable
 $ sudo ufw allow 5984/tcp
 $ sudo ufw reload
-
 ```
 
 ### istrav-osrm
