@@ -63,7 +63,7 @@ export async function server () {
 }
 
 export async function browser () {
-  let { getRxStorageDexie } = (await import('rxdb/plugins/dexie')).default;
+  let getRxStorageDexie = (await import('rxdb/plugins/dexie')).default.getRxStorageDexie;
 
   const rxdb = await createRxDatabase({
     name: 'data/istrav.pro',
