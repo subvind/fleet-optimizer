@@ -1,4 +1,3 @@
-const leveldown = require('leveldown');
 
 import { createRxDatabase } from 'rxdb';
 import { getRxStorageDexie } from 'rxdb/plugins/dexie';
@@ -51,6 +50,8 @@ async function addCollectionsToDatabase (database) {
 }
 
 export async function server () {
+  const leveldown = require('leveldown');
+
   addPouchPlugin(require('pouchdb-adapter-leveldb'));
 
   const rxdb = await createRxDatabase({
