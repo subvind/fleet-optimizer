@@ -1,7 +1,5 @@
 
 import { createRxDatabase } from 'rxdb';
-import { getRxStorageDexie } from 'rxdb/plugins/dexie';
-import { getRxStoragePouch, addPouchPlugin } from 'rxdb/plugins/pouchdb';
 
 import contactSchema from './schema/contacts'
 import customerSchema from './schema/customers'
@@ -50,6 +48,8 @@ async function addCollectionsToDatabase (database) {
 }
 
 export async function server () {
+  let { getRxStoragePouch, addPouchPlugin } = require('rxdb/plugins/pouchdb');
+
   const leveldown = require('leveldown');
 
   addPouchPlugin(require('pouchdb-adapter-leveldb'));
@@ -63,8 +63,10 @@ export async function server () {
 }
 
 export async function browser () {
+  let { getRxStorageDexie } = (await import('rxdb/plugins/dexie')).default;
+
   const rxdb = await createRxDatabase({
-    name: 'istrav.pro',
+    name: 'data/istrav.pro',
     storage: getRxStorageDexie()
   });
 
