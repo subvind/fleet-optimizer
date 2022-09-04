@@ -1,6 +1,8 @@
-import { FleetOptimizer } from '../index'
+import pro from '../index'
 
-let fleetOptimizer = FleetOptimizer.getInstance()
+let fleetOptimizer = pro.FleetOptimizer.getInstance()
+
+// notice: below code is old api
 
 // init fleet
 let myfleet = fleetOptimizer.fleet('myfleet').add()

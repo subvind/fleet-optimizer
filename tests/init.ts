@@ -1,9 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { FleetOptimizer } from '../index'
-import { server } from '../database/index'
+import pro from '../index'
 
-let fleetOptimizer = FleetOptimizer.getInstance()
+let fleetOptimizer = pro.FleetOptimizer.getInstance()
 
 function create(db) {
   // create fleet
@@ -104,7 +103,7 @@ async function destroy(db) {
 
 async function test () {
   // required storage system
-  let db = await fleetOptimizer.database(server)
+  let db = await fleetOptimizer.database(pro.database.server)
 
   // setup
   create(db)
