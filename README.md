@@ -18,6 +18,9 @@ The most optimal solution is the outcome where time is saved and where each memb
 
 tests:
 ```bash
+fleet1 Expert Services
+vehicle1 SDF123
+location1 Austin, TX
 ```
 
 examples:
