@@ -1,5 +1,9 @@
 fleet-optimizer
 ========
+production:
+- https://istrav.pro
+
+### about:
 The most optimal solution is the outcome where time is saved and where each member of the group makes more money than if they were to work individually. 
 
 - a fleet could be a company or team
