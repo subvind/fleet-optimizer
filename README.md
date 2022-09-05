@@ -1,6 +1,27 @@
 fleet-optimizer
 ========
-main: https://github.com/trabur/istrav.pro
+fleet management software
+
+source code:
+- library: https://github.com/trabur/fleet-optimizer
+- server: https://github.com/trabur/pro.istrav.dev
+- clients:
+  - browser: https://github.com/trabur/istrav.pro
+  - mobile: coming soon!
+
+apps:
+- osrm: https://osrm.istrav.dev
+- database: https://couchdb.istrav.dev
+- server: https://pro.istrav.dev
+- clients:
+  - browser: https://istrav.pro
+  - mobile: coming soon!
+
+library tech:
+- TypeScript
+- rxdb.info
+- couchdb.apache.org
+- project-osrm.org
 
 ### about:
 The most optimal solution is the outcome where time is saved and where each member of the group makes more money than if they were to work individually. 
