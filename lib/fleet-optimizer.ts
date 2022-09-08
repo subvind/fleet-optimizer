@@ -15,10 +15,20 @@ export class FleetOptimizer {
   }
 
   public db() {
-    return this.rxdb
+    // check if loaded every 0.1 seconds
+    return new Promise((resolve) => {
+      if (this.rxdb === null) {
+        setTimeout(async () => {
+          await this.db()
+        }, 100)
+      } else {
+        resolve(this.rxdb);
+      }
+    });
   }
 
   async database(rxdb: any) {
+    // only allow one to be loaded
     if (this.rxdb === null) {
       this.rxdb = await rxdb()
     }
