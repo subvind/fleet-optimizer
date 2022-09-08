@@ -7,6 +7,9 @@ export default {
     id: {
       type: 'string',
     },
+    name: {
+      type: 'string'
+    },
     licensePlate: {
       type: 'string'
     },
