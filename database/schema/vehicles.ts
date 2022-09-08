@@ -10,6 +10,29 @@ export default {
     licensePlate: {
       type: 'string'
     },
+    vin: {
+      type: 'string'
+    },
+    color: {
+      type: 'string'
+    },
+    make: {
+      type: 'string'
+    },
+    model: {
+      type: 'string'
+    },
+    year: {
+      type: 'number'
+    },
+    fuelVolumeUnits: {
+      type: 'string', // gallons, liters
+      default: 'gallons'
+    },
+    meterUnit: {
+      type: 'string', // mi, km
+      default: 'mi'
+    },
     driver: {
       ref: 'professional',
       type: 'string'
@@ -19,5 +42,5 @@ export default {
       type: 'string'
     }
   },
-  required: ['id', 'licensePlate']
+  required: ['id', 'name', 'fuelVolumeUnits', 'meterUnits']
 }
