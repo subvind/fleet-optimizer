@@ -103,7 +103,13 @@ async function destroy(db) {
 
 async function test () {
   // required storage system
-  let db = await fleetOptimizer.database(pro.database.server)
+  let database
+  setTimeout(async () => {
+    database = await fleetOptimizer.database(pro.database.server)
+  }, 500)
+
+  let db = await fleetOptimizer.db()
+  console.log(await db.customer.find().exec())
 
   // setup
   create(db)

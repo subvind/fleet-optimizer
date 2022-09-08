@@ -14,15 +14,17 @@ export class FleetOptimizer {
     return FleetOptimizer.instance;
   }
 
-  public db() {
+  public db(): Promise<any> {
     // check if loaded every 0.2 seconds
     let that = this
     return new Promise((resolve) => {
       let interval = setInterval(async () => {
-        console.log('loading', that.rxdb)
         if (that.rxdb !== null) {
+          console.log('loaded')
           clearInterval(interval)
           resolve(that.rxdb);
+        } else {
+          console.log('loading', that.rxdb)
         }
       }, 200)
     });
