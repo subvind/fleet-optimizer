@@ -15,16 +15,14 @@ export class FleetOptimizer {
   }
 
   public db() {
-    // check if loaded every 0.5 seconds
+    // check if loaded every 0.2 seconds
     let that = this
     return new Promise((resolve) => {
-      if (that.rxdb === null) {
-        setTimeout(async () => {
-          await that.db()
-        }, 500)
-      } else {
-        resolve(that.rxdb);
-      }
+      setInterval(async () => {
+        if (that.rxdb !== null) {
+          resolve(that.rxdb);
+        }
+      }, 200)
     });
   }
 
