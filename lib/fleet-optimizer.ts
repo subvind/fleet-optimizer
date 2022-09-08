@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export class FleetOptimizer {
-  private rxdb: any = {};
+  private rxdb: any = null;
   private static instance: FleetOptimizer;
 
   private constructor() {}
@@ -19,7 +19,10 @@ export class FleetOptimizer {
   }
 
   async database(rxdb: any) {
-    return this.rxdb = await rxdb()
+    if (this.rxdb === null) {
+      this.rxdb = await rxdb()
+    }
+    return this.rxdb
   }
 
   calculate(fleet: any) {
