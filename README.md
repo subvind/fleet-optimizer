@@ -121,3 +121,16 @@ osrm-contract ~/osm/north-america-latest.osrm
 # run
 osrm-routed ~/osm/north-america-latest.osrm
 ```
+
+### versioning
+```bash
+# tag a vew version
+$ npm version v1.0.1 --no-git-tag-version
+
+# check everything in
+$ git add . && git commit -m "version" && git push
+
+# then check version tag in
+$ git tag v1.0.1
+$ git push --tags
+```
