@@ -1,7 +1,14 @@
 {
   "name": "fleet-optimizer",
+  "author": "Travis Burandt <travis.burandt@gmail.com> (https://istrav.com)",
   "version": "1.0.2",
-  "description": "",
+  "description": "Fleet Management Software (FMS)",
+  "homepage": "https://istrav.pro",
+  "bugs": {
+    "url" : "https://github.com/trabur/fleet-optimizer/issues"
+  },
+
+  "license": "Fair Source 25 (v0.9).",
   "scripts": {
     "examples:storedash": "ts-node ./examples/storedash.ts",
     "examples:mrclean": "ts-node ./examples/mrclean.ts",
