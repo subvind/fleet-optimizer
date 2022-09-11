@@ -1,7 +1,8 @@
 fleet-optimizer
 ========
-fleet management software
+Fleet Management Software (FMS)
 
+### index
 source code:
 - library: https://github.com/trabur/fleet-optimizer
 - server: https://github.com/trabur/pro.istrav.dev
@@ -23,7 +24,13 @@ library tech:
 - couchdb.apache.org
 - project-osrm.org
 
-### about:
+### install
+```bash
+# https://www.npmjs.com/package/fleet-optimizer
+npm i fleet-optimizer
+```
+
+### about
 The most optimal solution is the outcome where time is saved and where each member of the group makes more money than if they were to work individually. 
 
 - a fleet could be a company or team
