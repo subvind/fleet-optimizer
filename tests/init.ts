@@ -102,6 +102,9 @@ async function destroy(db) {
 }
 
 async function test () {
+  // check version
+  console.log(`release: v${fleetOptimizer.version()}`)
+
   // required storage system
   let database
   setTimeout(async () => {

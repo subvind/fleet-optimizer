@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { version } from '../package.json';
 
 export class FleetOptimizer {
   private rxdb: any = null;
@@ -98,5 +99,9 @@ export class FleetOptimizer {
   }
   vehicles() {
     return this.rxdb.vehicle.find().exec()
+  }
+
+  version() {
+    return version // 1.0.2
   }
 }
